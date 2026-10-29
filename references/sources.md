@@ -7,6 +7,14 @@ or open license for them. Use them to calibrate linework and visual explanation,
 then generate original scenes. Do not paste them into user deliverables by default.
 No screenshots, mixed screenshot/drawing compositions, or UI captures are bundled.
 
+## Rights and provenance
+
+The 23 files under `assets/examples/` are copies of original drawings from [Shape Up](https://basecamp.com/shapeup), by Ryan Singer, published by Basecamp (37signals). Each entry below links to the corresponding original source. These copies are included solely as visual references; this description does not imply permission to redistribute them.
+
+The drawings and any associated trademarks remain the property of their respective rights holders. No ownership, open license, or redistribution permission is claimed for them. The repository's [MIT License](../LICENSE) covers only original project materials that the author has the right to license; it does **not** cover these drawings. Attribution alone does not grant reuse rights.
+
+This project is unofficial and is not affiliated with or endorsed by Ryan Singer, Basecamp, or 37signals. Rights holders may [open an issue](https://github.com/jerolan/shapeup-illustrations/issues) to raise concerns.
+
 Select one or two references by the needed visual grammar:
 
 - [01-team-tension.png](../assets/examples/01-team-tension.png): Human vignette: gesture, spatial contrast, short dialogue. [Original](https://basecamp.com/assets/images/books/shapeup/1.2/intro_cartoon.jpg).
