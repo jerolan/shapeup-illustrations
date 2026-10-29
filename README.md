@@ -135,14 +135,3 @@ With access to the private repository, clone it and make commits and pushes insi
 git clone https://github.com/jerolan/shapeup-illustrations.git
 cd shapeup-illustrations
 ```
-
-In dotfiles, the checkout lives at `agents/skills/shapeup-illustrations`. Commit and push the skill from that directory:
-
-```bash
-git -C agents/skills/shapeup-illustrations status
-git -C agents/skills/shapeup-illustrations add README.md README.es.md
-git -C agents/skills/shapeup-illustrations commit -m "Update illustration documentation"
-git -C agents/skills/shapeup-illustrations push origin main
-```
-
-Stage only the files you changed. After a skill commit, stage the submodule path in dotfiles to record its new commit. Commit that pointer separately when ready. A new machine needs GitHub access to initialize this private submodule.
