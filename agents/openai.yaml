@@ -1,0 +1,6 @@
+interface:
+  display_name: "Shape Up Illustrations"
+  short_description: "GPT drawings that explain ideas and visual progression"
+  default_prompt: "Use $shapeup-illustrations to generate an original hand-drawn explanatory image for this idea."
+policy:
+  allow_implicit_invocation: true
