@@ -1,0 +1,12 @@
+Estás en una sesión fresca, sin la conversación de origen. Ejecuta UNA prueba del skill actualizado y no modifiques sus instrucciones ni los README.
+
+Fuente del skill: /Users/jeromeolverasanchez/.dotfiles/agents/skills/shapeup-illustrations/SKILL.md. Lee esa fuente y las referencias que indique. El usuario autorizó explícitamente enviar el skill privado y las referencias seleccionadas al servicio de OpenAI mediante su sesión autenticada para estas pruebas.
+
+Solicitud al skill:
+Usa $shapeup-illustrations para explicar esta idea mediante una progresión abstracta: la importancia de una pieza depende de lo que sostiene, no de su tamaño. Usa la misma torre de bloques inspirada en Jenga como objeto central que evoluciona. Genera una sola imagen con los estados que necesites para hacer visible la afirmación. Conserva el objeto y sus identidades; el acento debe enfatizar solo lo que ayude a comprender el cambio. Sin personas. Elige tú la composición, los estados y el texto, si hace falta; texto visible en español.
+
+Usa DESIGN.md del directorio actual como paleta explícita, aplicable al destino de revisión aunque esté dentro del repositorio del skill. Destino final: /Users/jeromeolverasanchez/.dotfiles/agents/skills/shapeup-illustrations/development/reviews/2026-10-29-jenga-fresh-session.
+
+Usa tu herramienta nativa GPT para generar la imagen; no ejecutes otro codex, no subagentes, no resume/fork. Selecciona tú el prompt a partir del skill. Puedes consultar los ejemplos activos cuando sea útil; no leas development/iterations, las pruebas anteriores ni conversaciones previas. Respeta las restricciones de adjuntos de tu herramienta y documenta cualquier límite. Inspecciona las referencias visuales y el resultado. Como máximo una reparación por un defecto concreto; conserva el borrador si lo reparas. No regeneres por gusto estético, el usuario evaluará el resultado.
+
+Guarda image.png; generation-prompt.txt con el prompt EXACTO enviado a la herramienta; y review.md con la idea, solicitud, prompt exacto, referencias y sus funciones, tabla de estados, dimensiones, formato, inspección y limitaciones observadas. Si reparas, guarda también correction-prompt.txt e identifica el final. No prometas física exacta: verifica visualmente que una pieza retirada realmente falte de su ubicación y que el cambio explique el efecto sobre el conjunto. No sustituyas la generación por SVG/HTML/dibujo programático. Sin commit ni push. Si no tienes la herramienta nativa, informa el bloqueo sin abrir otra sesión.

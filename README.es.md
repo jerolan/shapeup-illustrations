@@ -2,104 +2,126 @@
 
 [English](README.md)
 
-Crea ilustraciones originales con el lenguaje visual de Shape Up: trazos simples, espacio en blanco y color para dirigir la atención. Explica una idea, muestra cómo evoluciona o cuenta cómo un equipo la desarrolla.
+Haz comprensible una idea mediante una ilustración original dibujada a mano:
+trazos simples y decididos, espacio en blanco y color cuando algo merece énfasis.
+Explica una afirmación, desarrolla un concepto abstracto o muestra a personas
+trabajando sobre una idea.
 
 ## Casos de uso
 
-Estos tres ejemplos exploran la misma app de tareas con una complejidad visual creciente. Son ilustraciones originales generadas. Los prompts piden el texto en inglés que aparece en las imágenes; la generación puede variar entre ejecuciones.
+Estos ejemplos originales generados muestran tres composiciones. Reutiliza el
+mecanismo explicativo para tu tema; la skill elige una representación según la
+idea. La generación varía entre ejecuciones. Ejecuta los prompts desde la raíz de
+este repositorio; en otro proyecto, cambia las rutas y usa su DESIGN.md.
 
-Ejecuta los prompts desde la raíz de este repositorio. En otro proyecto, cambia las rutas de salida y usa el `DESIGN.md` de ese proyecto.
+### 1. Una idea, una imagen
 
-### 1. Una idea simple
+**Poner más trabajo en marcha no elimina un cuello de botella.** Las fichas se
+acumulan en un canal ancho antes de un paso estrecho. El violeta enfatiza la
+restricción; la salida de una en una muestra por qué añadir más fichas solo
+hace crecer la cola.
 
-Una sola imagen hace visible una decisión de alcance: la primera versión incluye agregar y completar tareas. El límite violeta encierra únicamente esas dos acciones. No hacen falta personajes ni diálogo.
-
-![Una lista de papel con Add task y Complete task dentro de un límite violeta.](examples/01-single-idea.png)
-
-```text
-Usa $shapeup-illustrations para representar el alcance inicial de una app de tareas.
-Dibuja una lista de papel con solo "Add task" y "Complete task", ambas con casillas
-vacías, dentro de un límite violeta. Sin personajes, título ni diálogo.
-Usa examples/DESIGN.md para la paleta. Haz una imagen horizontal.
-Guárdala en examples/01-single-idea.png.
-```
-
-[Detalles de generación y paleta](examples/01-single-idea.md).
-
-### 2. Un concepto que evoluciona
-
-La misma lista cambia de izquierda a derecha: propone tres acciones, tacha los recordatorios mientras selecciona las otras dos y conserva solo el alcance inicial. La hoja y las entradas sin cambios siguen siendo reconocibles para que el lector pueda seguir la revisión.
-
-![Tres estados de una lista: agregar, completar y recordatorios; recordatorios tachados fuera del alcance seleccionado; solo agregar y completar permanecen.](examples/02-list-progression.png)
+![Las fichas se acumulan antes de un paso estrecho marcado en violeta y salen de una en una.](examples/simple-idea/image.png)
 
 ```text
-Usa $shapeup-illustrations para mostrar una propuesta de app de tareas en tres pasos.
-Haz una imagen horizontal con tres listas de papel, de izquierda a derecha:
-1. Casillas vacías con "Add task", "Complete task" y "Reminders".
-2. La misma lista, con "Reminders" tachado y un límite violeta que encierre
-   solo "Add task" y "Complete task".
-3. La misma hoja y límite, conservando solo "Add task" y "Complete task".
-Mantén la hoja, las posiciones de las filas y la letra. Sin personajes ni diálogo.
-Usa examples/DESIGN.md para la paleta. Guarda examples/02-list-progression.png.
+Usa $shapeup-illustrations para explicar que poner más trabajo en marcha no
+elimina un cuello de botella. Genera una sola imagen estática con una relación
+visual clara, sin viñetas ni secuencia temporal. Elige la representación;
+texto en español solo si hace falta. Usa examples/DESIGN.md.
+Guarda en examples/simple-idea/.
 ```
 
-[Detalles de generación y tabla de estados](examples/02-list-progression.md).
+[Prompt exacto de generación](examples/simple-idea/generation-prompt.txt) ·
+[Detalles de generación](examples/simple-idea/example.md).
 
-### 3. Una conversación que transforma la idea
+### 2. Personas que desarrollan una idea
 
-Los personajes, gestos y diálogos añaden las razones de cada cambio. Lee de izquierda a derecha y después hacia abajo: proponer la app, cuestionar los recordatorios, acotar el alcance y probar el prototipo en papel. La pizarra compartida cambia con la conversación.
+**Acordar el criterio de urgencia permite organizar una propuesta compartida.**
+Dos compañeros desarrollan la misma pizarra en cuatro viñetas: tarjetas sueltas,
+un criterio explícito de urgencia, grupos por prioridad y una prueba con casos.
+Las marcas de reloj violetas conservan el criterio mientras cambia la pizarra.
 
-![Cuatro viñetas muestran a dos compañeros proponiendo una app de tareas, cuestionando recordatorios, acotando el alcance y probando el prototipo en papel.](examples/02-idea-conversation.png)
+![Cuatro viñetas muestran a dos compañeros acordando la urgencia, agrupando las mismas tarjetas por prioridad y probando la organización con casos.](examples/character-narrative/image.png)
 
 ```text
-Usa $shapeup-illustrations para mostrar a dos compañeros desarrollando una idea de app de tareas.
-Haz una imagen de cuatro viñetas en una cuadrícula de 2x2. Mantén las mismas personas y pizarra.
-Muestra la idea, una objeción sobre recordatorios, un alcance menor y una prueba en papel.
-Pon este diálogo en globos dentro de las viñetas, en orden de lectura:
-"Let's build a task app."
-"Do we need reminders now?"
-"Start with add and complete."
-"Let's try this first."
-Usa examples/DESIGN.md para la paleta. Guarda examples/02-idea-conversation.png.
+Usa $shapeup-illustrations para cuatro viñetas en una cuadrícula de 2x2 con dos
+compañeros trabajando sobre el mismo artefacto. Explica que acordar el criterio
+de urgencia permite organizar su propuesta. El dibujo compartido debe cambiar
+visiblemente. Incluye estas líneas exactas en globos, en orden de lectura:
+"¿Qué problema resolvemos?"
+"Encontrar lo urgente."
+"Agrupemos por prioridad."
+"Probemos con estos casos."
+Usa examples/DESIGN.md. Guarda en examples/character-narrative/.
 ```
 
-[Detalles de generación, diálogo y continuidad](examples/02-idea-conversation.md).
+[Prompt exacto de generación](examples/character-narrative/generation-prompt.txt) ·
+[Diálogo, composición e inspección](examples/character-narrative/example.md).
+
+### 3. Un concepto abstracto que evoluciona
+
+**La importancia de una pieza depende de lo que sostiene, no de su tamaño.**
+La misma torre inspirada en Jenga sigue en pie al retirar la pieza grande A de
+la cima y se inclina al retirar su pequeño apoyo B. El violeta identifica a B
+en todos los estados. El objeto cambiante lleva el argumento y unas notas breves
+guían la lectura.
+
+![La misma torre permanece en pie al retirar A y se inclina cuando se retira su pequeño apoyo B violeta.](examples/conceptual-progression/image.png)
+
+```text
+Usa $shapeup-illustrations para explicar que la importancia de una pieza depende
+de lo que sostiene, no de su tamaño. Muestra una progresión abstracta de la misma
+torre de bloques inspirada en Jenga. Conserva el objeto y sus identidades;
+el acento debe enfatizar solo lo que ayude a comprender el cambio. Sin personas.
+Elige los estados y el texto necesario en español. Usa examples/DESIGN.md.
+Guarda en examples/conceptual-progression/.
+```
+
+[Prompt exacto de generación](examples/conceptual-progression/generation-prompt.txt) ·
+[Estados, corrección dirigida y limitaciones observadas](examples/conceptual-progression/example.md).
 
 ## Configuración y compatibilidad
 
-### Invocar la skill
+Invoca `$shapeup-illustrations` o pide la skill por su nombre. Describe la idea,
+la audiencia, el texto exacto si hace falta y el destino. Por defecto, guarda
+los resultados locales en `assets/<topic-slug>-shapeup/` dentro de tu proyecto,
+con un registro de generación en Markdown.
 
-Invoca `$shapeup-illustrations` en tu agente o pide la skill por su nombre. Describe la idea, la audiencia, el texto exacto que debe aparecer y el destino deseado. El agente elige una composición, genera la imagen y la inspecciona. Por defecto, guarda las imágenes locales en `assets/<topic-slug>-shapeup/` dentro de tu proyecto, junto con un archivo Markdown complementario.
-
-Una escena puede explicar una idea; las secuencias muestran cambios significativos. Las conversaciones de cuatro viñetas usan una cuadrícula de 2×2, pero hay otras composiciones y cantidades de viñetas disponibles. La skill crea escenas y diagramas dibujados, excluyendo capturas y composiciones basadas en capturas.
-
-### Generación de imágenes
-
-Usa un agente con generación de imágenes GPT nativa o Codex CLI instalado y autenticado con generación de imágenes GPT disponible. No necesitas una clave API nueva si cuentas con una opción autenticada. Si ninguna está disponible, el agente puede entregar un prompt, pero no generar la imagen.
+Usa un agente con generación de imágenes GPT nativa o Codex CLI instalado y
+autenticado con esa capacidad. Una opción autenticada no necesita una clave API
+nueva. Sin una ruta disponible, el agente puede preparar el prompt, pero no generar
+la imagen. Los resultados son dibujos; se excluyen capturas y composiciones basadas
+en capturas.
 
 ### Colores y DESIGN.md
 
-Para cada color, la prioridad es **petición explícita → `DESIGN.md` aplicable al proyecto → valores por defecto de la skill**. El agente revisa la raíz del proyecto y la ruta del directorio de salida; si hay valores en conflicto, prevalece el documento de diseño más cercano.
-
-Por ejemplo:
+Para cada elección por separado: **petición explícita → DESIGN.md aplicable al
+proyecto → valores por defecto de la skill**. Si los valores del proyecto entran
+en conflicto, prevalece el documento más cercano en la ruta de salida. Por defecto,
+el fondo es blanco y la tinta casi negra. El acento es opcional y tiene una función
+explicativa; el violeta de los ejemplos no es un tema global.
 
 ```text
 Usa el DESIGN.md de este proyecto para la paleta.
 ```
 
-Para cambiar solo el acento:
-
 ```text
-Respeta DESIGN.md, pero usa azul #2563EB para el límite de alcance.
+Respeta DESIGN.md, pero usa azul #2563EB para enfatizar el alcance revisado.
 ```
 
-Cambiar el acento conserva las demás decisiones de la paleta. El documento de diseño guía los colores y el fondo mientras la ilustración mantiene su estilo dibujado a mano. Sin indicaciones del proyecto ni una petición explícita, la skill usa negro sobre blanco con acentos funcionales discretos.
-
-[examples/DESIGN.md](examples/DESIGN.md) solo aplica a estos ejemplos, no a los proyectos que instalan la skill. GPT puede aproximar un color hexadecimal sin reproducirlo exactamente. Consulta las [reglas de color y diseño](references/style-dna.md#custom-accents-and-designmd).
+Cambiar el acento conserva las otras decisiones de paleta. DESIGN.md guía colores
+y fondo mientras el dibujo mantiene su lenguaje visual. GPT puede aproximar los
+hexadecimales pedidos. [examples/DESIGN.md](examples/DESIGN.md) solo aplica a esta
+galería. Consulta las [reglas de estilo y color](references/style.md).
 
 ## Referencias y derechos
 
-Los dibujos de Basecamp en `assets/examples/` son referencias de calibración. Sus autores conservan sus derechos. Consulta las [fuentes y su procedencia](references/sources.md). La skill crea escenas nuevas en lugar de copiar esas obras.
+Los dibujos originales de Basecamp en `assets/references/` calibran el estilo;
+sus autores conservan sus derechos. Las [fuentes y procedencia](references/sources.md)
+explican qué referencias seleccionar. Los ejemplos generados aprobados están en
+`examples/`. Las iteraciones y pruebas de desarrollo están separadas y no se cargan
+por defecto al generar. Consulta las [notas de desarrollo](development/README.md)
+al mantener la skill.
 
 ## Mantenimiento del repositorio
 

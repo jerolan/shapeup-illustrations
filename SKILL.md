@@ -1,31 +1,58 @@
 ---
 name: shapeup-illustrations
-description: "Generates original explanatory images with GPT Image in the hand-drawn visual language of Shape Up. Use for article illustrations, conceptual diagrams, evolving ideas, four-panel conversations, team situations, and image edits in this style, including custom accents or project DESIGN.md colors. Excludes screenshots and screenshot-based compositions."
+description: "Generate original explanatory GPT images in the hand-drawn visual language of Shape Up: a single visual idea, an evolving conceptual artifact, or character interactions with dialogue. Use for article illustrations, diagrams, visual metaphors, linked states, and image revisions, including project DESIGN.md colors. Excludes screenshots and screenshot-based compositions."
 ---
 
 # Shape Up Illustrations
 
-Turn one idea into an original, readable raster illustration using GPT image generation. The reference is the drawn artwork in Basecamp's Shape Up: spare black lines, simple people, visual relationships, and selective color. Screenshots, even screenshots with drawing overlays, are outside this skill's visual references and outputs.
+Make one claim understandable through a spare original drawing. Choose a visual
+relationship that explains the claim, then use the drawn language of Shape Up:
+confident pen or marker strokes, unfilled forms, expressive gestures, and purposeful
+whitespace. A polished illustration of objects alone is not an explanation.
 
 ## Workflow
 
-1. **Extract the idea.** Identify the point the image should make, the audience, and any exact visible text. Use the user's language for labels and dialogue. Infer reasonable defaults from the supplied article or request; ask only for information that prevents a meaningful result.
-2. **Choose the representation.** Read [composition-patterns.md](references/composition-patterns.md). Use a human vignette for a social tension or a diagram for a relationship. When the explanation builds an idea step by step, revises a proposal, develops a list, or describes changing states, read [progression.md](references/progression.md). Carry the same visual artifact through the explanation, make each change visible, and pair it with a brief message explaining its significance when helpful. Characters are optional in diagrams. Express the idea through an action or spatial relationship rather than a caption alone.
-3. **Calibrate the drawing.** Read [style-dna.md](references/style-dna.md), including its color and DESIGN.md rules. Resolve the palette in the target project before writing the prompt. Inspect one or two relevant local examples selected from [sources.md](references/sources.md) with the available image viewer. Treat them as style references; invent the scene, wording, and metaphor for this request. Do not reuse the book's dialogue or treat its diagram values as evidence.
-4. **Generate.** Build the prompt with [prompt-template.md](references/prompt-template.md) and follow [generation.md](references/generation.md). Use the native GPT image-generation tool when available. A request for an image means generate the bitmap; a request only for planning or prompts ends at that requested artifact. Do not insert an approval step between concept selection and authorized generation.
-5. **Inspect and repair.** Check the generated image using [qa-checklist.md](references/qa-checklist.md). Repair a concrete defect through GPT image generation, preserving correct content. Recheck the result before delivery.
-6. **Deliver.** Return the image and, when local files are available, its final path. For article sets, include each image's placement and brief alt text outside the bitmap. State material limitations without claiming checks that were not performed.
+1. **Define the claim.** Establish the audience and what they should understand.
+   Internally record: claim; visual carrier; meaningful transformation or relationship;
+   and the role of any accent. For example, a removed support changes what the
+   remaining structure can sustain. A topic such as “a tower” is not yet a claim.
+   Infer reasonable details; ask only when missing information prevents a meaningful
+   result. Use the user's language for visible text unless exact wording is supplied.
+2. **Choose the composition.** Read [composition.md](references/composition.md),
+   following only the relevant branch: single idea, conceptual progression, or
+   character narrative. Match layout and image count to the request. A series of
+   article images can share a style without forming a progression.
+3. **Calibrate.** Read [style.md](references/style.md), resolve the destination
+   project's palette, then use [sources.md](references/sources.md) to select and
+   inspect one or two relevant drawings. Attach them to the generator when supported,
+   explicitly identifying them as style references. For continuity or repairs, the
+   previous generated image is a separate reference with a different role.
+4. **Generate.** Follow [generation.md](references/generation.md) for the compact
+   prompt, native GPT route or authenticated Codex fallback, verification and delivery.
+   Generate when images are requested; stop at a proposal or prompt when that is the
+   requested artifact. Do not insert an approval step into authorized generation.
+5. **Inspect the explanation.** Check the bitmap against the claim and planned
+   transformation. Each asserted edit must exist visibly, and its consequence must
+   correspond to it. Repair a concrete defect while preserving correct content.
+6. **Deliver.** Return the image and actual local path when available. For a set,
+   include reading order or placement and brief alt text. State verification limits.
 
-## Defaults and series
+## Defaults
 
-- Generate one landscape 16:9 illustration unless the user requests another count or format; follow the tool's supported dimensions and report the actual result.
-- Save reference assets and generated deliverables as PNG by default. Convert other raster formats when needed, preserving dimensions and transparency; honor an explicitly requested output format.
-- Use white background, black linework, and at most one or two functional accent colors unless the request or the target project's DESIGN.md specifies otherwise. Resolve each choice as described in [style-dna.md](references/style-dna.md). Preserve requested transparency on edits; use transparent generation for an explicit cutout request.
-- Include no headline by default. Use only the short labels or dialogue needed to understand the idea. For prose-to-image requests, derive those words faithfully from the supplied text; for exact-text requests, copy the supplied strings verbatim.
-- For narrative progression, choose linked states within one bitmap or successive illustrations at the relevant points in an article. Use [progression.md](references/progression.md) to preserve the visual frame and make each transition legible. A set of independent illustrations needs stylistic consistency but does not automatically need a temporal story.
-- For a requested four-panel conversation, use the 2×2 layout and in-panel dialogue rules in [progression.md](references/progression.md). Keep other layouts available for other requests.
-- Save generated assets under `assets/<topic-slug>-shapeup/` in the user's project unless they provide a destination. Use descriptive, numbered filenames for sets and versioned siblings for revisions. Keep generation outputs out of this installed skill's resource directory.
+- One landscape image, approximately 16:9; adapt to explicit format requests and
+  the tool's supported sizes, reporting actual dimensions. Use a compact framing
+  that keeps the explanation legible rather than filling space with extra objects.
+- PNG, opaque white background, near-black ink. Accent is optional: use it for a
+  specific emphasis, decision, revision, dependency or identity distinction.
+- No headline by default; use only necessary labels or requested in-panel dialogue.
+- Save project deliverables under `assets/<topic-slug>-shapeup/` unless given another
+  destination. Preserve prior versions. Keep a short Markdown record with the image.
+  Ordinary user outputs belong in the destination project, not this installed skill.
 
-## Bundled resources
+## Resources
 
-The package is usable offline for style selection: `assets/examples/` contains only drawn reference artwork, indexed with provenance in [sources.md](references/sources.md). Network access is needed for GPT generation, not for fetching style references on every invocation. Do not load the whole gallery when one example will resolve the drawing choice.
+`assets/references/` contains original drawn calibration references with provenance
+in `references/sources.md`. `examples/` contains three approved generated examples
+for optional composition guidance. Neither is a source of factual data for a new
+request. Inspect only what the task needs. `development/` holds exploration history
+and review runs; it is not routine generation context.

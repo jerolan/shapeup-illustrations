@@ -1,0 +1,3 @@
+# Keep raw process traces local; review briefs, exact prompts and final images are artifacts.
+reviews/**/session-events.jsonl
+reviews/**/session-stderr.log
