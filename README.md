@@ -101,6 +101,18 @@ An accent override changes the accent while preserving the other palette choices
 
 The Basecamp drawings in `assets/examples/` are calibration references. Their authors retain their rights. See [sources and provenance](references/sources.md). The skill creates new scenes rather than copying reference artwork.
 
+## Attribution & disclaimer
+
+This is an independent, unofficial project inspired by the visual language of [Shape Up](https://basecamp.com/shapeup), written by Ryan Singer and published by Basecamp (37signals). It is not affiliated with, sponsored by, or endorsed by Ryan Singer, Basecamp, or 37signals.
+
+The skill is intended to generate original illustrations rather than copy the book's artwork. This repository currently includes copies of original Shape Up drawings in `assets/examples/` as visual references. Those drawings and any associated trademarks remain the property of their respective rights holders. They are **not** covered by this project's MIT License. Attribution does not grant permission to copy, adapt, or redistribute third-party artwork.
+
+See [sources and provenance](references/sources.md) for links to the original drawings. Rights holders can [open a GitHub issue](https://github.com/jerolan/shapeup-illustrations/issues) to raise concerns or request a review of the material.
+
+## License
+
+The [MIT License](LICENSE) applies only to original material that the project author owns or has the right to license. It does not apply to the bundled Shape Up reference artwork or other third-party materials.
+
 ## Maintain the repository
 
 With access to the private repository, clone it and make commits and pushes inside the checkout:
