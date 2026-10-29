@@ -13,14 +13,19 @@ the stable shared frame and entity identities, and reading order; omit for isola
 Guided explanation, when relevant: {what each step establishes, adds, questions,
 or revises; exact short accompanying message and its placement; preserve the message
 when the conclusion remains unchanged}
-Drawing: black hand-drawn pen contours on white, naturally irregular strokes,
+Drawing: hand-drawn pen contours, naturally irregular strokes,
 unfilled simple forms, sparse details, readable handwritten lettering.
 People, if needed: blank oval heads, outlined torsos, thin limbs, small oval hands;
 communicate emotion through posture and gesture.
-Color: {functional accent and precisely what it identifies}
+Color: {resolved ink, background, functional accent, and precisely what each identifies}
+Palette source: {explicit request, applicable project DESIGN.md, or skill defaults;
+resolve each choice separately before generation}
 Visible text: {exact quoted strings and their placement, or "none"}
 Canvas: {requested aspect ratio and background}
 Reference images: {each attached reference and its role, if any}
+Four-panel conversation, when requested: {2x2 reading order, stable characters
+and shared artifact, visible edit per panel, exact dialogue and speaker per panel,
+and any necessary short in-panel explanation}
 Boundaries: drawn artwork only; exclude screenshots, browser chrome, realistic
 product interfaces, screenshot overlays, branding, watermarks, and decorative titles.
 Use references for linework, simplicity, and spacing; invent an original scene.

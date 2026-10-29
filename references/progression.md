@@ -58,6 +58,16 @@ Distinguish conceptual position from measurement. A hill can show uncertainty be
 
 Keep the requested image count. A request for progression does not itself request animation; render the change through static visual states unless animation is explicitly requested and supported by the generator.
 
+## Four-panel conversations
+
+When the user requests four quadrants or a four-panel conversation, generate one bitmap with a 2×2 grid. Read top left, top right, bottom left, then bottom right. Use whitespace gutters or light hand-drawn dividers. Keep the same people, shared artifact, viewpoint, and color roles recognizable across all four panels.
+
+Give each panel one explanatory beat. An idea, an objection, a revision, and an agreement work when the source supports that story. A fourth panel can instead leave an open question or next experiment. Do not manufacture agreement or completion to fill the layout.
+
+Place short dialogue in speech bubbles or small text messages within the corresponding panel. Make the speaker unambiguous and put the bubble near that person. Use concise wording faithful to the supplied conversation, or preserve exact strings when requested. Add a brief in-panel explanatory note only when the visual change and dialogue leave a necessary transition unclear. Keep captions outside the image for alt text and supporting documentation, not as a replacement for requested in-panel text.
+
+Develop the idea in the drawing as well as the dialogue: question an existing mark, remove an option, narrow a boundary, or try the revised artifact. Four unchanged scenes with different messages do not show development. Resolve palette and contrast using [style-dna.md](style-dna.md) before generation.
+
 ## Local calibration
 
 Choose a relevant sequence from [sources.md](sources.md): `12-hill-sequence-*` for movement; `13-map-sequence-*` and `08-scope-map.png` for structure emerging; `14-flow-sequence-*` and `05-interaction-flow.png` for constructing and revising an explanation; `15-integration-sequence-*` and `07-integrated-slice.png` for a repeated conclusion followed by a decisive change; `16-list-sequence-*` and `06-marker-sketch.png` for list and interaction revisions. These are drawn references only. Transfer their continuity mechanism to the new subject rather than copying their words or scenario.

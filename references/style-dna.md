@@ -2,7 +2,7 @@
 
 ## Line and space
 
-Draw black pen or marker contours on clean white. Lines have natural wobble, rounded ends, and small variations in weight. Keep generous whitespace around a small number of distinct objects. Use flat, unfilled forms with clear silhouettes. The result should feel like a thoughtful sketch made during a conversation.
+Draw pen or marker contours, black on white by default. Apply the project palette below when supplied. Lines have natural wobble, rounded ends, and small variations in weight. Keep generous whitespace around a small number of distinct objects. Use flat, unfilled forms with clear silhouettes. The result should feel like a thoughtful sketch made during a conversation.
 
 Use medium pen strokes for people and diagrams. Use a distinctly thicker marker for deliberately rough structural sketches. Keep this difference intentional; roughness expresses which details remain open.
 
@@ -20,9 +20,19 @@ For rough structural sketches, render unspecified copy as loose strokes and keep
 
 ## Color and lettering
 
-Black carries the structure. A restrained accent identifies a change, warning, correspondence, or emphasis. Multiple scopes can have distinct colors when those colors track their identity across a sequence; this overrides the usual one-or-two-accent default.
+The ink color carries the structure. A restrained accent identifies a change, warning, correspondence, or emphasis. Multiple scopes can have distinct colors when those colors track their identity across a sequence; this overrides the usual one-or-two-accent default.
 
 Use casual, readable handwritten lettering with ample room inside bubbles. Keep accents and punctuation in the user's language. Prioritize correct readable text over ornamental handwriting.
+
+## Custom accents and DESIGN.md
+
+Resolve accent, ink, and background separately. For each choice, use the explicit user request first, the applicable DESIGN.md value second, and this skill's defaults last. An explicit accent overrides only the accent, not an unrelated background choice. Without a specified accent, choose one restrained color that fits the idea.
+
+Read a DESIGN.md explicitly supplied by the user. Otherwise inspect DESIGN.md at the target project root and along the output directory's path within that project. The nearest scoped document wins for conflicting values. Resolve referenced palette files only as needed. Use the destination project, not this installed skill's directory or an unrelated sibling project.
+
+Apply the document's relevant palette and background guidance. Preserve hand-drawn contours, simple forms, whitespace, and readable lettering instead of copying product UI or unrelated layout rules. On a dark background, use contrasting light ink. If a required accent lacks contrast, change its placement or add a contrasting outline rather than silently replacing it.
+
+Carry the resolved color values and their semantic roles into the generation prompt and delivery sidecar. Keep those roles stable across panels. If DESIGN.md is absent, continue with the defaults. If a requested document or token cannot be read, report that limitation rather than inventing its values. GPT generation may approximate a requested hex color; do not promise pixel-exact palette matching.
 
 ## Style boundaries
 
