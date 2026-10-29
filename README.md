@@ -2,56 +2,54 @@
 
 [Español](README.es.md)
 
-Create original hand-drawn illustrations for ideas, changing proposals, and team conversations in the visual language of Shape Up. The skill draws scenes and diagrams, not screenshots or screenshot-based compositions.
+Create original illustrations in the visual language of Shape Up: simple hand-drawn lines, generous whitespace, and color that directs attention. Explain one idea, show how it changes, or tell how a team develops it.
 
-## Requirements
+## Use cases
 
-Use an agent with native GPT image generation, or an installed, authenticated Codex CLI with GPT image generation available. You do not need a new API key for an authenticated route. If neither route is available, the agent can provide a prompt but cannot generate the image.
+These three examples explore the same task app with increasing visual complexity. They are original generated illustrations. The prompts request the English text shown in the images; generation can vary between runs.
 
-## Use
+Run the prompts from this repository's root. In another project, change the output paths and use that project's `DESIGN.md`.
 
-Invoke `$shapeup-illustrations` in your agent, or ask for the `shapeup-illustrations` skill by name. Describe the idea, the audience, any exact visible text, and your desired destination. The agent selects a drawing composition, generates the image, and inspects it. By default, local images go in `assets/<topic-slug>-shapeup/` in your project, with a Markdown sidecar.
+### 1. One simple idea
 
-Use a single scene for one idea or a sequence when the change matters. Four-panel conversations use a 2×2 grid, but other compositions and panel counts are available. Dialogue belongs inside its panel; a brief explanatory note can also appear there when needed.
+A single image makes a scope decision visible: the first version includes adding and completing tasks. The violet boundary encloses just those two actions. No characters or dialogue are needed.
 
-## Examples
-
-These examples are original generated illustrations, not copies of the book. The English strings below are the requested visible text. Generation may vary between runs, and identical bitmaps are not guaranteed.
-
-Run these prompts from this repository's root. In another project, replace the output paths and use that project's `DESIGN.md`.
-
-### A small first version
-
-![Two people point to a paper checklist inside a blue scope boundary.](examples/01-small-first-version.png)
-
-The boundary selects only two actions for the first version. The requested blue overrides the sample design's violet accent without changing the ink or background.
-
-Ask for:
+![A paper list with Add task and Complete task inside a violet scope boundary.](examples/01-single-idea.png)
 
 ```text
-Use $shapeup-illustrations to show a small first version of a task app.
-Draw two people pointing to a paper checklist with only "Add task" and
-"Complete task". Use a blue accent, #2563EB, for the boundary around that scope.
-Respect examples/DESIGN.md for the other colors. Make one landscape image,
-with no headline or dialogue. Save it as examples/01-small-first-version.png.
+Use $shapeup-illustrations to show the initial scope of a task app.
+Draw one paper list with only "Add task" and "Complete task", both with empty
+checkboxes, inside a violet scope boundary. No people, headline, or dialogue.
+Use examples/DESIGN.md for the palette. Make one landscape image.
+Save it as examples/01-single-idea.png.
 ```
 
-The [example sidecar](examples/01-small-first-version.md) contains the detailed generation prompt and palette.
+[Generation details and palette](examples/01-single-idea.md).
 
-### An idea develops through conversation
+### 2. A concept evolves
 
-![Four panels show two teammates questioning and trying a smaller task app idea.](examples/02-idea-conversation.png)
+The same list develops from left to right: propose three actions, cross out reminders while selecting the other two, then keep only the initial scope. The paper and unchanged entries stay recognizable so the reader can follow the revision.
 
-Read left to right, then down:
+![Three states of the same paper list: add, complete, and reminders; reminders crossed out outside the selected scope; only add and complete remain.](examples/02-list-progression.png)
 
-1. Propose a task app with a checklist and reminders.
-2. Question whether reminders belong in the first version.
-3. Cross out the bell and select only the checklist.
-4. Try the smaller proposal by checking a box on the paper prototype.
+```text
+Use $shapeup-illustrations to show a task app proposal evolving in three steps.
+Make one landscape image with three paper lists, read left to right:
+1. Empty checkboxes labeled "Add task", "Complete task", and "Reminders".
+2. The same list, with "Reminders" crossed out and a violet boundary enclosing
+   only "Add task" and "Complete task".
+3. The same paper and boundary with only "Add task" and "Complete task" remaining.
+Keep the paper, row positions, and lettering consistent. No people or dialogue.
+Use examples/DESIGN.md for the palette. Save examples/02-list-progression.png.
+```
 
-The dialogue explains each change inside its panel. The shared whiteboard makes the revision visible, rather than relying on messages alone.
+[Generation details and state table](examples/02-list-progression.md).
 
-Ask for:
+### 3. A conversation develops the idea
+
+Characters, gestures, and dialogue add the reasons behind the changes. Read left to right, then down: propose the app, question reminders, narrow the scope, and try the paper prototype. The shared whiteboard changes with the conversation.
+
+![Four panels show two teammates proposing a task app, questioning reminders, narrowing its scope, and trying the smaller paper prototype.](examples/02-idea-conversation.png)
 
 ```text
 Use $shapeup-illustrations to show two teammates developing a task app idea.
@@ -65,15 +63,39 @@ Put this dialogue inside speech bubbles, in reading order:
 Use examples/DESIGN.md for the palette. Save examples/02-idea-conversation.png.
 ```
 
-The [example sidecar](examples/02-idea-conversation.md) contains the detailed generation prompt and a table of states, dialogue, and continuity.
+[Generation details, dialogue, and continuity](examples/02-idea-conversation.md).
 
-## Color and project design
+## Setup and compatibility
 
-For each color choice, an explicit request takes precedence over the applicable `DESIGN.md`, followed by the skill defaults. An accent override changes the accent, not the background. The applicable design document guides palette and background; it does not turn the drawing into a UI mockup.
+### Invoke the skill
 
-Without project guidance or an explicit request, the skill uses black on white with restrained functional accents.
+Invoke `$shapeup-illustrations` in your agent, or ask for the skill by name. Describe the idea, the audience, any exact visible text, and the output destination. The agent selects a composition, generates the image, and inspects it. By default, local images go in `assets/<topic-slug>-shapeup/` in your project, with a Markdown sidecar.
 
-[examples/DESIGN.md](examples/DESIGN.md) applies to these examples only. It is not a global theme for projects using the skill. GPT may approximate a requested hex color rather than match it exactly. See [color and design rules](references/style-dna.md#custom-accents-and-designmd) for how the agent selects project guidance.
+One scene can explain one idea; sequences show meaningful changes. Four-panel conversations use a 2×2 grid, but other layouts and panel counts are available. The skill creates drawn scenes and diagrams, excluding screenshots and screenshot-based compositions.
+
+### Image generation
+
+Use an agent with native GPT image generation, or an installed, authenticated Codex CLI with GPT image generation available. You do not need a new API key for an authenticated route. If neither route is available, the agent can provide a prompt but cannot generate the image.
+
+### Colors and DESIGN.md
+
+For each color choice, the priority is **explicit request → applicable project `DESIGN.md` → skill defaults**. The agent checks the project root and the output directory's path; the nearest scoped design document wins when values conflict.
+
+For example:
+
+```text
+Use this project's DESIGN.md for the palette.
+```
+
+To override just the accent:
+
+```text
+Respect DESIGN.md, but use blue #2563EB for the scope boundary.
+```
+
+An accent override changes the accent while preserving the other palette choices. The design document guides colors and background while the illustration keeps its hand-drawn style. Without project guidance or an explicit request, the skill uses black on white with restrained functional accents.
+
+[examples/DESIGN.md](examples/DESIGN.md) applies only to these examples, not to projects that install the skill. GPT may approximate a requested hex color rather than match it exactly. See the [color and design rules](references/style-dna.md#custom-accents-and-designmd).
 
 ## References and rights
 

@@ -2,56 +2,54 @@
 
 [English](README.md)
 
-Crea ilustraciones originales a mano para explicar ideas, cambios en propuestas y conversaciones de equipo con el lenguaje visual de Shape Up. La skill dibuja escenas y diagramas, no capturas ni composiciones basadas en capturas.
+Crea ilustraciones originales con el lenguaje visual de Shape Up: trazos simples, espacio en blanco y color para dirigir la atención. Explica una idea, muestra cómo evoluciona o cuenta cómo un equipo la desarrolla.
 
-## Requisitos
+## Casos de uso
 
-Usa un agente con generación de imágenes GPT nativa o Codex CLI instalado y autenticado con generación de imágenes GPT disponible. No necesitas una clave API nueva si cuentas con una opción autenticada. Si ninguna está disponible, el agente puede entregar un prompt, pero no generar la imagen.
+Estos tres ejemplos exploran la misma app de tareas con una complejidad visual creciente. Son ilustraciones originales generadas. Los prompts piden el texto en inglés que aparece en las imágenes; la generación puede variar entre ejecuciones.
 
-## Uso
+Ejecuta los prompts desde la raíz de este repositorio. En otro proyecto, cambia las rutas de salida y usa el `DESIGN.md` de ese proyecto.
 
-Invoca `$shapeup-illustrations` en tu agente o pide la skill por su nombre, `shapeup-illustrations`. Describe la idea, la audiencia, el texto exacto que debe aparecer y el destino deseado. El agente elige una composición, genera la imagen y la inspecciona. Por defecto, guarda las imágenes locales en `assets/<topic-slug>-shapeup/` dentro de tu proyecto, junto con un archivo Markdown complementario.
+### 1. Una idea simple
 
-Usa una escena para una idea o una secuencia cuando importe mostrar el cambio. Las conversaciones de cuatro viñetas usan una cuadrícula de 2×2, pero también hay otras composiciones y cantidades de viñetas. El diálogo va dentro de cada viñeta; también puede incluir una breve nota explicativa cuando haga falta.
+Una sola imagen hace visible una decisión de alcance: la primera versión incluye agregar y completar tareas. El límite violeta encierra únicamente esas dos acciones. No hacen falta personajes ni diálogo.
 
-## Ejemplos
-
-Estos ejemplos son ilustraciones originales generadas, no copias del libro. Las cadenas en inglés son el texto solicitado para las imágenes. La generación puede variar entre ejecuciones y no garantiza imágenes idénticas.
-
-Ejecuta estos prompts desde la raíz de este repositorio. En otro proyecto, cambia las rutas de salida y usa el `DESIGN.md` de ese proyecto.
-
-### Una primera versión pequeña
-
-![Dos personas señalan una lista de papel dentro de un límite azul.](examples/01-small-first-version.png)
-
-El límite selecciona solo dos acciones para la primera versión. El azul solicitado reemplaza el acento violeta del diseño de ejemplo sin cambiar la tinta ni el fondo.
-
-Pide lo siguiente:
+![Una lista de papel con Add task y Complete task dentro de un límite violeta.](examples/01-single-idea.png)
 
 ```text
-Usa $shapeup-illustrations para mostrar una primera versión pequeña de una app de tareas.
-Dibuja dos personas señalando una lista de papel con solo "Add task" y
-"Complete task". Usa el acento azul #2563EB para el límite de ese alcance.
-Respeta examples/DESIGN.md para los demás colores. Haz una imagen horizontal,
-sin título ni diálogo. Guárdala en examples/01-small-first-version.png.
+Usa $shapeup-illustrations para representar el alcance inicial de una app de tareas.
+Dibuja una lista de papel con solo "Add task" y "Complete task", ambas con casillas
+vacías, dentro de un límite violeta. Sin personajes, título ni diálogo.
+Usa examples/DESIGN.md para la paleta. Haz una imagen horizontal.
+Guárdala en examples/01-single-idea.png.
 ```
 
-El [archivo complementario](examples/01-small-first-version.md) contiene el prompt detallado de generación y la paleta.
+[Detalles de generación y paleta](examples/01-single-idea.md).
 
-### Una idea evoluciona en una conversación
+### 2. Un concepto que evoluciona
 
-![Cuatro viñetas muestran a dos compañeros cuestionando y probando una idea más pequeña para una app de tareas.](examples/02-idea-conversation.png)
+La misma lista cambia de izquierda a derecha: propone tres acciones, tacha los recordatorios mientras selecciona las otras dos y conserva solo el alcance inicial. La hoja y las entradas sin cambios siguen siendo reconocibles para que el lector pueda seguir la revisión.
 
-Lee de izquierda a derecha y después hacia abajo:
+![Tres estados de una lista: agregar, completar y recordatorios; recordatorios tachados fuera del alcance seleccionado; solo agregar y completar permanecen.](examples/02-list-progression.png)
 
-1. Proponer una app de tareas con lista y recordatorios.
-2. Cuestionar si los recordatorios pertenecen a la primera versión.
-3. Tachar la campana y seleccionar solo la lista.
-4. Probar la propuesta reducida marcando una casilla en el prototipo de papel.
+```text
+Usa $shapeup-illustrations para mostrar una propuesta de app de tareas en tres pasos.
+Haz una imagen horizontal con tres listas de papel, de izquierda a derecha:
+1. Casillas vacías con "Add task", "Complete task" y "Reminders".
+2. La misma lista, con "Reminders" tachado y un límite violeta que encierre
+   solo "Add task" y "Complete task".
+3. La misma hoja y límite, conservando solo "Add task" y "Complete task".
+Mantén la hoja, las posiciones de las filas y la letra. Sin personajes ni diálogo.
+Usa examples/DESIGN.md para la paleta. Guarda examples/02-list-progression.png.
+```
 
-El diálogo explica cada cambio dentro de su viñeta. La pizarra compartida hace visible la revisión, en lugar de depender solo de los mensajes.
+[Detalles de generación y tabla de estados](examples/02-list-progression.md).
 
-Pide lo siguiente:
+### 3. Una conversación que transforma la idea
+
+Los personajes, gestos y diálogos añaden las razones de cada cambio. Lee de izquierda a derecha y después hacia abajo: proponer la app, cuestionar los recordatorios, acotar el alcance y probar el prototipo en papel. La pizarra compartida cambia con la conversación.
+
+![Cuatro viñetas muestran a dos compañeros proponiendo una app de tareas, cuestionando recordatorios, acotando el alcance y probando el prototipo en papel.](examples/02-idea-conversation.png)
 
 ```text
 Usa $shapeup-illustrations para mostrar a dos compañeros desarrollando una idea de app de tareas.
@@ -65,15 +63,39 @@ Pon este diálogo en globos dentro de las viñetas, en orden de lectura:
 Usa examples/DESIGN.md para la paleta. Guarda examples/02-idea-conversation.png.
 ```
 
-El [archivo complementario](examples/02-idea-conversation.md) contiene el prompt detallado de generación y una tabla de estados, diálogo y continuidad.
+[Detalles de generación, diálogo y continuidad](examples/02-idea-conversation.md).
 
-## Color y diseño del proyecto
+## Configuración y compatibilidad
 
-Para cada color, una petición explícita tiene prioridad sobre el `DESIGN.md` aplicable y después sobre los valores por defecto de la skill. Cambiar el acento no cambia el fondo. El documento de diseño aplicable guía la paleta y el fondo, pero no convierte el dibujo en una maqueta de interfaz.
+### Invocar la skill
 
-Sin indicaciones del proyecto ni una petición explícita, la skill usa negro sobre blanco con acentos funcionales discretos.
+Invoca `$shapeup-illustrations` en tu agente o pide la skill por su nombre. Describe la idea, la audiencia, el texto exacto que debe aparecer y el destino deseado. El agente elige una composición, genera la imagen y la inspecciona. Por defecto, guarda las imágenes locales en `assets/<topic-slug>-shapeup/` dentro de tu proyecto, junto con un archivo Markdown complementario.
 
-[examples/DESIGN.md](examples/DESIGN.md) solo aplica a estos ejemplos. No es un tema global para los proyectos que usan la skill. GPT puede aproximar un color hexadecimal sin reproducirlo exactamente. Consulta las [reglas de color y diseño](references/style-dna.md#custom-accents-and-designmd) para conocer cómo el agente selecciona las instrucciones del proyecto.
+Una escena puede explicar una idea; las secuencias muestran cambios significativos. Las conversaciones de cuatro viñetas usan una cuadrícula de 2×2, pero hay otras composiciones y cantidades de viñetas disponibles. La skill crea escenas y diagramas dibujados, excluyendo capturas y composiciones basadas en capturas.
+
+### Generación de imágenes
+
+Usa un agente con generación de imágenes GPT nativa o Codex CLI instalado y autenticado con generación de imágenes GPT disponible. No necesitas una clave API nueva si cuentas con una opción autenticada. Si ninguna está disponible, el agente puede entregar un prompt, pero no generar la imagen.
+
+### Colores y DESIGN.md
+
+Para cada color, la prioridad es **petición explícita → `DESIGN.md` aplicable al proyecto → valores por defecto de la skill**. El agente revisa la raíz del proyecto y la ruta del directorio de salida; si hay valores en conflicto, prevalece el documento de diseño más cercano.
+
+Por ejemplo:
+
+```text
+Usa el DESIGN.md de este proyecto para la paleta.
+```
+
+Para cambiar solo el acento:
+
+```text
+Respeta DESIGN.md, pero usa azul #2563EB para el límite de alcance.
+```
+
+Cambiar el acento conserva las demás decisiones de la paleta. El documento de diseño guía los colores y el fondo mientras la ilustración mantiene su estilo dibujado a mano. Sin indicaciones del proyecto ni una petición explícita, la skill usa negro sobre blanco con acentos funcionales discretos.
+
+[examples/DESIGN.md](examples/DESIGN.md) solo aplica a estos ejemplos, no a los proyectos que instalan la skill. GPT puede aproximar un color hexadecimal sin reproducirlo exactamente. Consulta las [reglas de color y diseño](references/style-dna.md#custom-accents-and-designmd).
 
 ## Referencias y derechos
 

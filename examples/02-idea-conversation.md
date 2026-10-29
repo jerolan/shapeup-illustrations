@@ -3,7 +3,7 @@
 Core idea: two teammates question a task app's scope, defer reminders, and try the smaller idea on paper.
 
 - Image: [02-idea-conversation.png](02-idea-conversation.png).
-- Placement: the progression example in each README.
+- Placement: the third use case in each README, after the simple idea and list progression.
 - Alt text: Four panels show the same two teammates proposing a task app, questioning reminders, narrowing the idea to adding and completing tasks, and trying that paper prototype.
 - Requested canvas: one landscape image, 16:9 if supported, with a 2×2 grid.
 - Actual output: PNG, 1672 × 941 pixels, approximately 16:9.

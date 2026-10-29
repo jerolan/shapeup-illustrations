@@ -3,7 +3,7 @@
 Core idea: a task app can start with adding and completing tasks.
 
 - Image: [01-small-first-version.png](01-small-first-version.png).
-- Placement: the first example in each README.
+- Placement: supplementary example of a blue accent override; the README now opens with [one simple idea](01-single-idea.md).
 - Alt text: Two people point to a paper checklist with Add task and Complete task inside a blue scope boundary.
 - Visible text: `Add task`, `Complete task`.
 - Requested canvas: one landscape image, 16:9 if supported.
